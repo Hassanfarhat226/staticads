@@ -18,20 +18,14 @@
       max-width: 720px;
       height: auto;
       border-radius: 20px; /* Rounded Borders */
+      display: block;
     }
   </style>
 </head>
 <body>
-  <video id="video" autoplay loop muted playsinline>
+  <video autoplay loop muted playsinline>
     <source src="static-ad-fast-moving-examples.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const video = document.getElementById('video');
-      video.play().catch(error => console.log("Autoplay failed: ", error));
-    });
-  </script>
 </body>
 </html>
