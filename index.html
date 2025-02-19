@@ -22,9 +22,16 @@
   </style>
 </head>
 <body>
-  <video controls autoplay loop muted playsinline>
+  <video id="video" autoplay loop muted playsinline>
     <source src="static-ad-fast-moving-examples.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const video = document.getElementById('video');
+      video.play().catch(error => console.log("Autoplay failed: ", error));
+    });
+  </script>
 </body>
 </html>
